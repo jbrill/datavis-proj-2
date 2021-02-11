@@ -62,39 +62,39 @@ for index, row in data_frame.iterrows():
 #     json.dump(year_structure, f, ensure_ascii=False, indent=4)
 
 
-# curr_year = 1970
-# genre_structure = []
-# countries = [
-#     'USA',
-#     'United Kingdom',
-#     'Germany',
-#     'Sweden',
-#     'Finland',
-# ]
-# while curr_year < 2017:
-#     date_string = "{}-{}".format(curr_year, curr_year + 5)
-#     for country in countries:
-#         genre_date_structure = {
-#             'country': country,
-#             'time': date_string,
-#         }
-#         for index, row in data_frame.iterrows():
-#             if (
-#                 row['formed'] == '-' or int(row['formed']) <= (curr_year + 5)
-#             ) and (
-#                 row['split'] == '-' or int(row['split']) >= (curr_year)
-#             ) and (
-#                 row['origin'] == country
-#             ):
-#                 genres = row['style'].split(',')
-#                 for genre in genres:
-#                     if genre.rstrip() not in genre_date_structure:
-#                         genre_date_structure[genre.rstrip()] = 0
-#                     genre_date_structure[genre.rstrip()] += row['fans']
-#         genre_structure.append(genre_date_structure)
-#     curr_year += 5
+curr_year = 1970
+genre_structure = []
+countries = [
+    'USA',
+    'United Kingdom',
+    'Germany',
+    'Sweden',
+    'Finland',
+]
+while curr_year < 2017:
+    date_string = "{}-{}".format(curr_year, curr_year + 5)
+    for country in countries:
+        genre_date_structure = {
+            'country': country,
+            'time': date_string,
+        }
+        for index, row in data_frame.iterrows():
+            if (
+                row['formed'] == '-' or int(row['formed']) <= (curr_year + 5)
+            ) and (
+                row['split'] == '-' or int(row['split']) >= (curr_year)
+            ) and (
+                row['origin'] == country
+            ):
+                genres = row['style'].split(',')
+                for genre in genres:
+                    if genre.rstrip() not in genre_date_structure:
+                        genre_date_structure[genre.rstrip()] = 0
+                    genre_date_structure[genre.rstrip()] += row['fans']
+        genre_structure.append(genre_date_structure)
+    curr_year += 5
 
-# # pprint(year_structure)
+# pprint(year_structure)
 
 # import operator
 
