@@ -1,0 +1,140 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {
+        'packages':['geochart'],
+        // Note: you will need to get a mapsApiKey for your project.
+        // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
+        'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+      });
+      google.charts.setOnLoadCallback(drawRegionsMap);
+
+      function drawRegionsMap() {
+        var data = google.visualization.arrayToDataTable([
+          ['Country', 'Fans'],
+          ['United Kingdom', 129.61449275362318],
+          ['Sweden', 132.0903361344538],
+          ['United States', 114.42317822651448],
+          ['Finland', 146.84364820846906],
+          ['Germany', 90.639798488665],
+          ['Poland', 75.27],
+          ['Norway', 125.30630630630631],
+          ['The Netherlands', 76.06666666666666],
+          ['Switzerland', 98.16981132075472],
+          ['France', 38.126126126126124],
+          ['Brazil', 72.55932203389831],
+          ['Portugal', 69.3409090909091],
+          ['Australia', 44.51908396946565],
+          ['Greece', 42.397590361445786],
+          ['Italy', 32.93119266055046],
+          ['Austria', 65.97368421052632],
+          ['Canada', 55.24844720496895],
+          ['Israel', 65],
+          ['Ireland', 72.73684210526316],
+          ['Faroe Islands', 123.6],
+          ['Denmark', 45.39705882352941],
+          ['Russia', 25.51388888888889],
+          ['Ukraine', 29.56],
+          ['Spain', 23.512820512820515],
+          ['Iceland', 26.28],
+          ['Andorra', 279],
+          ['Tunisia, France', 275],
+          ['Belgium', 17.982758620689655],
+          ['Romania', 14.857142857142858],
+          ['Chile', 41.84615384615385],
+          ['Japan', 28.923076923076923],
+          ['Colombia, USA', 184],
+          ['Taiwan', 72],
+          ['Hungary, United Kingdom', 177],
+          ['nan', 37.375],
+          ['Hungary', 25.772727272727273],
+          ['New Zealand', 24.454545454545453],
+          ['Greece, Sweden', 47],
+          ['Sweden, Finland', 134],
+          ['Australia, United Kingdom', 124],
+          ['Estonia', 18.076923076923077],
+          ['Jordan', 30],
+          ['Latvia', 9.208333333333334],
+          ['Slovenia', 23.88888888888889],
+          ['Iran', 24.8],
+          ['Mexico', 12.266666666666667],
+          ['Argentina', 19.38888888888889],
+          ['Turkey', 15.5],
+          ['UAE', 41],
+          ['Liechtenstein', 74],
+          ['Czech Republic', 12.470588235294118],
+          ['Norway, Finland', 64],
+          ['Serbia', 10.705882352941176],
+          ['Belgium, United Kingdom', 58],
+          ['Egypt', 43],
+          ['Russia, Canada', 58],
+          ['Indonesia', 20.6],
+          ['Iraq, USA', 51],
+          ['Lithuania', 14.333333333333334],
+          ['China', 22],
+          ['India', 18.125],
+          ['Slovak Republic', 10.833333333333334],
+          ['Kyrgyzstan, Germany', 41],
+          ['Singapore', 20],
+          ['Lebanon', 14.25],
+          ['Croatia', 8.3],
+          ['Malta', 19.2],
+          ['Luxembourg', 11],
+          ['Syria', 13.8],
+          ['Saudi Arabia', 26],
+          ['Georgia', 20],
+          ['USA, Cyprus', 10],
+          ['Bahrain', 19],
+          ['Iraq', 19],
+          ['Korea, South', 17],
+          ['Malaysia', 16],
+          ['South Africa', 7.6],
+          ['Bulgaria', 5.416666666666667],
+          ['Greece, USA', 13],
+          ['Israel, Germany', 12],
+          ['Peru', 5],
+          ['Macedonia', 11],
+          ['Portugal, United Kingdom', 10],
+          ['Bosnia and Herzegovina', 7.75],
+          ['Belarus', 5.333333333333333],
+          ['Monaco', 6],
+          ['Moldova', 9],
+          ['Costa Rica', 6.5],
+          ['Bosnia and Herzegovina, Croatia', 9],
+          ['Colombia', 3.6666666666666665],
+          ['Cyprus', 2.2857142857142856],
+          ['Iran, Norway', 6],
+          ['Finland, Sweden', 6],
+          ['Ukraine, Canada', 5],
+          ['Bolivia', 5],
+          ['Sri Lanka', 3],
+          ['Armenia', 4],
+          ['Azerbaijan', 4],
+          ['Lithuania, United Kingdom', 3],
+          ['Ecuador', 3],
+          ['Mexico, USA', 3],
+          ['Canada, France', 2],
+          ['Albania', 2],
+          ['Jersey', 2],
+          ['Lithuania, Germany', 2],
+          ['United Kingdom, Greece', 2],
+          ['Swaziland', 2],
+          ['Italy, Spain', 1],
+          ['Venezuela', 1],
+          ['Poland, Sweden', 1],
+          ['Greenland', 0],
+        ]);
+
+        var options = {};
+
+        var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="regions_div" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>
